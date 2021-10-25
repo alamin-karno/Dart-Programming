@@ -1,7 +1,8 @@
 # Table of contents
 
-* [Welcome!](README.md)
-* [Quick Start](quick-start.md)
+* [Dart Programming - Bangla](README.md)
+* [Introduction](introduction.md)
+* [Install Android Studio and Dartpad](install-android-studio-and-dartpad.md)
 
 ## Reference
 
