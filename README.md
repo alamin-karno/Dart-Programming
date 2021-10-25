@@ -10,8 +10,9 @@ description: >-
 ## Topics
 
 * ****[**Introduction**](introduction.md)****
+* ****[**Install Android Studio and Dartpad**](install-android-studio-and-dartpad.md)****
 * **Comment**
-* **Vaiable**
+* **Variable**
 * **Data Type**
 * **Input**
 * **If / else**
@@ -21,6 +22,6 @@ description: >-
 * **Map**
 * **Set**
 * **Queue**
-* **Fuction**
+* **Function**
 * **Class**
 * ****
