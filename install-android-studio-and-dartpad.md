@@ -38,7 +38,7 @@ Dart এবং Flutter SDK environment path create হয়ে গেলে এর
 
 পুরো Installtion শেষ করে আমরা নতুন করে Android Studio open করব । এর পরে প্রথমেই plugin option এর মধ্যে ক্লিক করব । এইখানে আসার পরে আমাদেরকে দুইটা plugin install করে নিতে হবে । প্রথমে Dart plugin টি Install করব এবং এর পরে Flutter plugin install করব । দুইটি plugin install করা শেষ হলে আমরা আমাদের IDE মানে Android Studio restart দিব । এর পরে আমাদের Android Studio পুরো দমে Dart এবং Flutter Application Development করার জন্য তৈরি ।
 
-### Android Studio Setup এবং Enviromnet Setup এর ভিডিও
+### Android Studio Setup এবং Environment Setup এর ভিডিও
 
 {% embed url="https://youtu.be/rgfrk01Fwjg" %}
 02\. Installing Dart & Flutter Environmet (Android Studio) in Windows
