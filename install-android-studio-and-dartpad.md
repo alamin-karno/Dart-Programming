@@ -24,7 +24,7 @@ Dartpad মূলত dart programming code করার জন্য একট�
 
 ### **Setup Environment Path**
 
-Dart এবং Flutter SDK Download করার পরে আপনাকে Computer/Laptop এর মধ্যে এই দুইটা SDK এর জন্য  Environment path create করতে হবে । এর জন্য আগে আপনাকে ZIP ফাইল দুইটা Unzip করে PC/Laptop এর **C Drive** এর মধ্যে **src** নামে Folder create করে এর ভিতরে রাখবেন । এর পরে Dart এবং Flutter এর bin folder path copy করে environment path এর মধ্যে setup করে হবে । বিস্তারিত [নিচের ভিডিও](install-android-studio-and-dartpad.md#undefined) তে দেখনো আছে ।
+Dart এবং Flutter SDK Download করার পরে আপনাকে Computer/Laptop এর মধ্যে এই দুইটা SDK এর জন্য  Environment path create করতে হবে । এর জন্য আগে আপনাকে ZIP ফাইল দুইটা Unzip করে PC/Laptop এর **C Drive** এর মধ্যে **src** নামে Folder create করে এর ভিতরে রাখবেন । এর পরে Dart এবং Flutter এর bin folder path copy করে environment path এর মধ্যে setup করে হবে । বিস্তারিত [নিচের ভিডিও](install-android-studio-and-dartpad.md#android-studio-setup-enviromnet-setup) তে দেখনো আছে ।
 
 ### Download and Install Android Studio
 
