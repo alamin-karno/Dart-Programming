@@ -6,7 +6,7 @@ description: >-
 
 # Install Visual Studio Code
 
-### sssDownload Visual Studio Code
+### Download Visual Studio Code
 
 প্রথমেই আমাদের মাথায় এইটা আসতে পারে যে Already তো আমরা Android Studio Install করেছি তাহলে কেন আবার Visual Studio Code Install করব? তো তাদের জন্য বলতে চাই । আপনার PC/Laptop configuration যদি ভাল মানের না হয় সেক্ষেত্রে Android Studio ব্যবহার করতে গিয়ে আপনি কিছু সমস্যা তে পরতে পারেন । যেমন ল্যাগ করা , হ্যাং হয়ে যাওয়া, দেরিতে কাজ করা এমন কিছু । তাই আপনি চাইলে Android Studio এর পরিবর্তে VS Code ব্যবহার করতে পারেন । তো এর আগের Section এ আমরা দেখে নিয়েছিলাম কিভাবে Dart SDK এবং Flutter SDK Downloads করতে হয় এবং তা দিয়ে কিভাবে Environment Setup করতে হয় । তাই আর আজকে এই নিয়ে আলোচনা করলাম না । তো প্রথমে আজকে আমরা Visual Studio Code Download করবে এবং এর পরে Install করে নিব ।
 
