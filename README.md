@@ -11,6 +11,7 @@ description: >-
 
 * ****[**Introduction**](introduction.md)****
 * ****[**Install Android Studio and Dartpad**](install-android-studio-and-dartpad.md)****
+* **Install Visual Studio C**
 * **Comment**
 * **Variable**
 * **Data Type**
