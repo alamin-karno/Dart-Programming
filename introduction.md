@@ -7,9 +7,13 @@ description: >-
 
 # Introduction
 
-### Dart এর ইতিহাস ?
+### Dart এর ইতিহাস?
 
 Dart প্রথম রিভিল করা হয়েছিল GOTO conference এর মধ্যে October 10-12, 2012 সালে Aarhus, Denmark এ । এই প্রযেক্ট নিয়ে কাজ করেছেন Lars Bak এবং Kasper Lund আর প্রথম Dart এর রিলিজ করা হয়েছিল ১৪ই নভেম্বর, ২০১৩ সালে । এর পর থেকেই প্রতিনিয়তই এর আপডেট হয়ে চলছে এবং কিছুদিনের মধ্যেই জনপ্রিয় programming lagauge এর জায়গা দখল করে নিয়েছে ।&#x20;
+
+### Dart কি এবং কিভাবে কাজ করে ?
+
+Dart একটি Object-Oriented Language developed by Google. Dart দিয়ে কাজ করার সময় এইটি JIT (Just in Time) compilation ব্যবহার করে যার কারনে development এর সময় অনেক faster compilation হয় এবং fast reload নেয় । আর development শেষে এই কোড যখন কোন device এ run করা হয় তখনো অনেক Fast কাজ করে becuase of AOT (Ahead of Time) ।
 
 ### কেনো Dart Programming শিখব ?
 
@@ -18,7 +22,7 @@ Dart মূলত তৈরি করা হয়েছিল যেকোন Plat
 ### ১০ টি কারণ যার জন্য Dart শিখা উচিত ?
 
 1. Dart is flexible
-2. Dart embraced the open source ecosystem
+2. Dart embraced the open-source ecosystem
 3. Dart is pretty easy to learn
 4. Dart is a good first language
 5. Dart has great tooling language
