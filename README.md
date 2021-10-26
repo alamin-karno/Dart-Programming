@@ -12,7 +12,7 @@ description: >-
 * ****[**Introduction**](introduction.md)****
 * ****[**Install Android Studio and Dartpad**](install-android-studio-and-dartpad.md)****
 * ****[**Install Visual Studio Code**](install-visual-studio-code.md)****
-* **Write your first code in dart**
+* ****[**Write your first code in dart**](first-code-in-dart.md)****
 * **Comment**
 * **Variable**
 * **Data Type**
