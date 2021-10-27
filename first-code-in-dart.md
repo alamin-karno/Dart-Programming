@@ -40,7 +40,7 @@ void main(){
 >
 > true
 
-### Mathmatical Term Output
+### Mathematical Term Output
 
 ```
 void main(){
@@ -81,6 +81,10 @@ void main(){
 > Language
 
 ### নিচের ভিডিও তে বিস্তারিত আলোচনা করা হইয়েছে
+
+{% embed url="https://youtu.be/R-yHcDqGXBw" %}
+04/ First Code in Dart Programming
+{% endembed %}
 
 {% hint style="info" %}
 ভিডিও টি দেখে নিজের মন্তব্য অবশ্যই জানাবেন ।
