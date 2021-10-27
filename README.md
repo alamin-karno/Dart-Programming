@@ -15,7 +15,7 @@ coverY: 184.19970631424377
 * ****[**Install Android Studio and Dartpad**](install-android-studio-and-dartpad.md)****
 * ****[**Install Visual Studio Code**](install-visual-studio-code.md)****
 * ****[**Write your first code in dart**](first-code-in-dart.md)****
-* **Comment**
+* ****[**Comment**](comments.md)****
 * **Variable**
 * **Data Type**
 * **Input**
