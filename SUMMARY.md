@@ -5,6 +5,7 @@
 * [Install Android Studio and Dartpad](install-android-studio-and-dartpad.md)
 * [Install Visual Studio Code](install-visual-studio-code.md)
 * [First code in Dart](first-code-in-dart.md)
+* [Comments](comments.md)
 
 ## Reference
 
