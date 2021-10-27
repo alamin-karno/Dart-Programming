@@ -53,8 +53,8 @@ void main(){
 
 /*
  
- This is our multiple line comment.
- This code is for learing comments.
+ This is our multiple-line comment.
+ This code is for learning comments.
  
 */ 
 
@@ -86,6 +86,10 @@ void main(){
 > true
 
 ### কমেন্ট নিয়ে YouTube ভিডিও ?
+
+{% embed url="https://youtu.be/R-yHcDqGXBw" %}
+04\. Comments in Dart Programming
+{% endembed %}
 
 {% hint style="info" %}
 **ভিডিও টি দেখার জন্য ধন্যবাদ । আরো নতুন নতুন ভিডিও পেতে চাইলে চ্যানেলটি subscribe করা রাখুন ।**
