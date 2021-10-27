@@ -25,6 +25,6 @@ Install Complete হয়ে গেলে আপনাকে open করতে হ
 {% endembed %}
 
 {% hint style="info" %}
-Thanks for reading. এইরকম সব ভিডিও পেতে চাইলে এখনি আমার চ্যানে
+**Thanks for reading । এইরকম সব ভিডিও পেতে চাইলে এখনি আমার চ্যানেলটি সাবস্ক্রাইব করে রাখুন ।**
 {% endhint %}
 
