@@ -15,3 +15,7 @@
 ## Reference
 
 * [Resource](reference/resource.md)
+
+## 👨🎓 About
+
+* [Author](about/author.md)
