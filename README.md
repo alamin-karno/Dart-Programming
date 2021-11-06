@@ -11,12 +11,12 @@ coverY: 184.19970631424377
 
 ## Topics
 
-* ****[**Introduction**](introduction.md)****
-* ****[**Install Android Studio and Dartpad**](install-android-studio-and-dartpad.md)****
-* ****[**Install Visual Studio Code**](install-visual-studio-code.md)****
-* ****[**Write your first code in dart**](first-code-in-dart.md)****
-* ****[**Comment**](comments.md)****
-* **Variable**
+* ****[**Introduction**](topics/introduction.md)****
+* ****[**Install Android Studio and Dartpad**](topics/install-android-studio-and-dartpad.md)****
+* ****[**Install Visual Studio Code**](topics/install-visual-studio-code.md)****
+* ****[**Write your first code in dart**](topics/first-code-in-dart.md)****
+* ****[**Comment**](topics/comments.md)****
+* ****[**Variable**](topics/variable.md)****
 * **Data Type**
 * **Input**
 * **If / else**
