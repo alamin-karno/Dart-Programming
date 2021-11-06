@@ -17,7 +17,7 @@ coverY: 184.19970631424377
 * ****[**Write your first code in dart**](topics/first-code-in-dart.md)****
 * ****[**Comment**](topics/comments.md)****
 * ****[**Variable**](topics/variable.md)****
-* **Data Type**
+* ****[**Data Type**](topics/data-types.md)****
 * **Input**
 * **If / else**
 * **Switch**
