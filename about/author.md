@@ -12,7 +12,7 @@ description: ধন্যবাদ, Author Info জানতে আগ্রহ�
 
 BSc in Computer Science & Engineering, **Daffodil International University**
 
-Mobile Application Developer Instructor, [**Instructory **](https://instructory.net/users/Alamin.Karno)****
+Mobile Application Developer Instructor, [**Instructory** ](https://instructory.net/users/Alamin.Karno)****
 
 ****
 
@@ -28,7 +28,7 @@ Facebook Page: [https://www.facebook.com/alamin.karnoOfficial/](https://www.face
 
 Facebook Group: [https://www.facebook.com/groups/alaminkarno](https://www.facebook.com/groups/alaminkarno)
 
-Github: [https://github.com/karno786](https://github.com/karno786)
+Github: [https://github.com/](https://github.com/karno786)alamin-karno
 
 LinkedIn: [https://www.linkedin.com/in/alaminkarno/](https://www.linkedin.com/in/alaminkarno/)
 
@@ -38,7 +38,7 @@ Twitter: [https://twitter.com/alamin\_karno](https://twitter.com/alamin\_karno)
 
 Pinterest: [https://www.pinterest.com/alaminkarno](https://www.pinterest.com/alaminkarno)
 
-Dribble: [https://dribbble.com/Karno786](https://dribbble.com/Karno786)
+Dribble: [https://dribbble.com/](https://dribbble.com/Karno786)karno786
 
 Behance: [https://www.behance.net/alaminkarno](https://www.behance.net/alaminkarno)
 
