@@ -21,7 +21,7 @@ description: আজকে আমরা শিখব কিভাবে Dart Prog
 
 ### Single Line Comment
 
-```
+```dart
 void main(){
   
   // This is my first dart code
@@ -30,26 +30,28 @@ void main(){
 
   print("This is my first code");  // This is my comment
 
-  // This is a mathmetical output
+  // This is a mathematical output
   print(4+1);
 
-  // Priting boolean value
+  // Printing boolean value
   print(true);
   
 }
 ```
 
-> Hello World
->
-> This is my first code&#x20;
->
-> 5&#x20;
->
-> true
+{% hint style="success" %}
+Hello World
+
+This is my first code&#x20;
+
+5&#x20;
+
+true
+{% endhint %}
 
 ### Multiple Line Comment
 
-```
+```dart
 
 /*
  
@@ -68,22 +70,24 @@ void main(){
 
   print("This is my first code");  // This is my comment
 
-  // This is a mathmetical output
+  // This is a mathematical output
   print(4+1);
 
-  // Priting boolean value
+  // Printing boolean value
   print(true);
   
 }
 ```
 
-> Hello World&#x20;
->
-> This is my first code&#x20;
->
-> 5&#x20;
->
-> true
+{% hint style="success" %}
+Hello World&#x20;
+
+This is my first code&#x20;
+
+5&#x20;
+
+true
+{% endhint %}
 
 ### কমেন্ট নিয়ে YouTube ভিডিও ?
 

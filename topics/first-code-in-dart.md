@@ -8,22 +8,24 @@ description: >-
 
 ### Hello World
 
-```
+```dart
 void main(){
   print("Hello World!");
 }
 ```
 
-> Hello World!
+{% hint style="success" %}
+Hello World!
+{% endhint %}
 
 ### Multiple Output
 
-```
+```dart
 void main(){
   
   print("Hello World");
 
-  print("This is my first code");
+  print("This is my first code.");
 
   print(4);
 
@@ -32,17 +34,19 @@ void main(){
 }
 ```
 
-> Hello World
->
-> This is my first code
->
-> 4
->
-> true
+{% hint style="success" %}
+Hello World
+
+This is my first code.
+
+
+
+true
+{% endhint %}
 
 ### Mathematical Term Output
 
-```
+```dart
 void main(){
   
   print(4+1);
@@ -56,17 +60,19 @@ void main(){
 }
 ```
 
-> 5
->
-> 4
->
-> 20
->
-> 4
+{% hint style="success" %}
+5
+
+4
+
+20
+
+4
+{% endhint %}
 
 ### NewLine in Output
 
-```
+```dart
 void main(){
   
   print(" Hello \n Dart \n Language");
@@ -74,11 +80,13 @@ void main(){
 }
 ```
 
-> Hello
->
-> Dart
->
-> Language
+{% hint style="success" %}
+Hello
+
+Dart
+
+Language
+{% endhint %}
 
 ### নিচের ভিডিও তে বিস্তারিত আলোচনা করা হইয়েছে
 

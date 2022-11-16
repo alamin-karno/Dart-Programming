@@ -6,9 +6,9 @@ description: >-
 
 # Variable
 
-### var datatypes with assigned value
+### var datatypes with an assigned value
 
-```
+```dart
 void main(){
   
   var number = 10; 
@@ -36,7 +36,7 @@ true
 
 ### var datatypes with a second-line assigned value
 
-```
+```dart
 void main(){
   
   var name; 
@@ -60,7 +60,7 @@ YouTube
 
 ### var single-line declaration
 
-```
+```dart
 void main(){
   
   var name,age,country; 

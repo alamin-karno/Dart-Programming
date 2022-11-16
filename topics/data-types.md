@@ -6,7 +6,7 @@ description: এইখানে আমরা Dart Programing এর Data Types �
 
 ### int - data types example
 
-```
+```dart
 void main() {
   
   int age = 13;
@@ -22,7 +22,7 @@ void main() {
 
 ### String - data types example
 
-```
+```dart
 void main() {
   
   String name = "Alamin";
@@ -38,12 +38,12 @@ Alamin
 
 ### int, double, String, boolean - data types example
 
-```
+```dart
 void main() {
   
   String name;
   int num;
-  bool statemnet;
+  bool statement;
   double number;
   
   
@@ -54,7 +54,7 @@ void main() {
   
   print(name);
   print(num);
-  print(statemnet);
+  print(statement);
   print(number);
 }
 ```
@@ -71,12 +71,12 @@ true
 
 ### কিভাবে Data Types বের করব ?
 
-```
+```dart
 void main() {
   
   var name;
   var num;
-  var statemnet;
+  var statement;
   var number;
   
   
@@ -87,18 +87,20 @@ void main() {
   
   print(name.runtimeType);
   print(num.runtimeType);
-  print(statemnet.runtimeType);
+  print(statement.runtimeType);
   print(number.runtimeType);
 }
 ```
 
-> String&#x20;
->
-> int&#x20;
->
-> bool&#x20;
->
-> double
+{% hint style="success" %}
+String&#x20;
+
+int&#x20;
+
+bool&#x20;
+
+double
+{% endhint %}
 
 ### Data Types নিয়ে বিস্তারিত ভিডিও ?
 
