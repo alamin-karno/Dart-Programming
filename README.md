@@ -18,6 +18,8 @@ coverY: 184.19970631424377
 * ****[**Comment**](topics/comments.md)****
 * ****[**Variable**](topics/variable.md)****
 * ****[**Data Type**](topics/data-types.md)****
+* ****[**String Interpolation**](topics/constant-keywords.md)****
+* ****[**Constant Keywords**](topics/constant-keywords.md)****
 * **Input**
 * **If / else**
 * **Switch**
