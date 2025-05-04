@@ -13,11 +13,12 @@
 * [Data Types](topics/data-types.md)
 * [String Interpolation](topics/string-interpolation.md)
 * [Constant Keywords](topics/constant-keywords.md)
+* [Async Programming in Dart](topics/async-programming-in-dart.md)
 
 ## Reference
 
 * [Resource](reference/resource.md)
 
-## 👨🎓 About
+## 👨‍🎓 About
 
 * [Author](about/author.md)
