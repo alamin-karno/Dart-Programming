@@ -26,6 +26,14 @@ final stream = Stream.fromIterable([1, 2, 3]);
 stream.listen((value) => print('Received: \$value'));
 ```
 
+Output:
+
+{% hint style="success" %}
+Received: 1\
+Received: 2\
+Received: 3
+{% endhint %}
+
 This stream emits the numbers 1, 2, and 3 in order. It supports only one listener. If you try to listen again, it will throw an error.
 
 #### 2. Broadcast Streams
@@ -44,6 +52,15 @@ controller.sink.add(1);
 controller.sink.add(2);
 ```
 
+Output:
+
+{% hint style="success" %}
+Listener A: 1\
+Listener B: 1\
+Listener A: 2\
+Listener B: 2
+{% endhint %}
+
 Here, two listeners are added to a single stream. Both will receive the same events emitted by the controller.
 
 ### Creating Streams in Dart
@@ -56,8 +73,16 @@ Here, two listeners are added to a single stream. Both will receive the same eve
 ```dart
 final stream = Stream.fromIterable(["user1", "user2", "user3"]);
 
-stream.listen((user) => print('Processing user: $user'));  // Processes each user one by one
+stream.listen((user) => print('Processing user: $user'));
 ```
+
+Output:
+
+{% hint style="success" %}
+Processing user: user1\
+Processing user: user2\
+Processing user: user3
+{% endhint %}
 
 This creates a stream that emits elements from a list one by one.
 
@@ -67,11 +92,18 @@ This creates a stream that emits elements from a list one by one.
 * **When?** You need repeated actions over time, such as refreshing data every few seconds or updating a stopwatch UI.
 
 ```dart
-// Emits 0,1,2,... every second, for 5 ticks
-final stream = Stream.periodic(Duration(seconds: 1), (count) => count).take(5);
+final stream = Stream.periodic(Duration(seconds: 1), (count) => count).take(3);
 
-stream.listen((tick) => print('Tick #$tick'));  // Tick #0, Tick #1, ... Tick #4
+stream.listen((tick) => print('Tick $tick'));
 ```
+
+Output (1 second delay between each line):
+
+{% hint style="success" %}
+Tick: 0\
+Tick: 1\
+Tick: 2
+{% endhint %}
 
 This emits a new value (based on `count`) every second. Useful for timers or polling.
 
@@ -92,6 +124,14 @@ Stream<String> fetchPages(int totalPages) async* {
 fetchPages(3).listen((page) => print('Received page: $page'));
 ```
 
+Hypothetical Output (if `fetchPageFromApi` returns "Page $i" after delay):
+
+{% hint style="success" %}
+Received page: Page 1\
+Received page: Page 2\
+Received page: Page 3
+{% endhint %}
+
 This is an asynchronous generator. It yields a value after each delay. Ideal for step-by-step processing with delays or awaiting async tasks.
 
 ### Custom Streams with StreamController
@@ -109,6 +149,13 @@ controller.sink.add("Hello");
 controller.sink.add("World");
 await controller.close();
 ```
+
+Expected Output:
+
+{% hint style="success" %}
+Received: Hello\
+Received: World
+{% endhint %}
 
 This approach is helpful when you're manually handling events—such as user inputs or system data.
 
