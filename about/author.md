@@ -4,49 +4,57 @@ description: ধন্যবাদ, Author Info জানতে আগ্রহ�
 
 # Author
 
-![মোঃ আল-আমিন](<../.gitbook/assets/Md. Al-Amin Karno Logo.jpg>)
-
 ### Author এর পরিচয় -
+
+<figure><img src="../.gitbook/assets/Md. Al-Amin.png" alt=""><figcaption><p>Md. Al-Amin (Software Engineer)</p></figcaption></figure>
 
 ## Md. Al-Amin
 
-BSc in Computer Science & Engineering, **Daffodil International University**
+**Software Engineer L-II, Vivasoft Limited**\
+**সাবেক Flutter Developer, Rokomari.com**\
+**Instructor,** [**Instructory**](https://instructory.net/users/Alamin.Karno) **| Content Creator, YouTube**
 
-Mobile Application Developer Instructor, [**Instructory** ](https://instructory.net/users/Alamin.Karno)****
+### 🎓 শিক্ষাগত যোগ্যতা
 
-****
+* **স্নাতক**: কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং (CSE), Daffodil International University
+* **সিজিপিএ**: 3.92 (পাসের বছর: ২০২১)
 
-### বিস্তারিত -
+### 💼 পেশাগত অভিজ্ঞতা
 
-মোঃ আল-আমিন Daffodil International Universtiy থেকে BSc in CSE Complete করেছেন ২০২১ সালে । তার CGPA - 3.92 । সে Computer Science & Engineering এর পড়াশোনার পাশাপাশি নিজের ক্যারিয়ার হিসেবে Mobile Application Development কে বেছে নিয়েছেন । তিনি ২০১৯ সালে BASIS থেকে Certified প্রাপ্ত একজন Android App Developer এবং ২০২১ সালে তিনি Cross Platfrom App Development (Flutter) এর উপরে ICT Division এর under এ কোর্স সম্পন্ন করেন । বর্তমানে YouTube এর মধ্যে Mobile Application Development এর Content বানানোর পাশাপাশি Instructory তে Android App Development এর Instructor হিসেবে যুক্ত আছেন । এ ছাড়াও তিনি প্রথমআলো বন্ধুসভার ড্যাফোডিল ক্যাম্পাসের সাথে যুক্ত ছিলেন দীর্ঘ ৩ বছর এবং সেইখানে তিনি তার কর্মের যথার্থ পরিচয় দিয়েছেন । এছাড়াও তিনি ২০১৭ সালে Genex Infosys Limited এর Robi Axiata Limited এর Brand Promoter হিসেবে চাকরী করেছেন ৫ মাস । &#x20;
+* **Vivasoft Limited**: বর্তমানে Software Engineer L-II পদে কর্মরত। এখানে তিনি Flutter এবং Android অ্যাপ ডেভেলপমেন্টে কাজ করছেন।&#x20;
+* **Rokomari.com**: সাবেক Junior Software Engineer (Flutter Developer)। এখানে তিনি Flutter ভিত্তিক অ্যাপ ডেভেলপমেন্টে গুরুত্বপূর্ণ ভূমিকা পালন করেছেন।
 
-### Social ID Link:
+### 🧑‍🏫 প্রশিক্ষণ ও শিক্ষা কার্যক্রম
 
-Facebook: [http://facebook.com/alamin786](http://facebook.com/alamin786)
+* **Instructory**: Android App Development এর Instructor হিসেবে কাজ করছেন। [Behance](https://www.behance.net/alaminkarno?locale=en_US\&utm_source=chatgpt.com)
+* **YouTube**: Mobile Application Development বিষয়ক কনটেন্ট তৈরি করছেন, যা নতুন শিক্ষার্থীদের জন্য সহায়ক।
 
-Facebook Page: [https://www.facebook.com/alamin.karnoOfficial/](https://www.facebook.com/alamin.karnoOfficial/inbox/)
+### 🏆 প্রশিক্ষণ ও সার্টিফিকেশন
 
-Facebook Group: [https://www.facebook.com/groups/alaminkarno](https://www.facebook.com/groups/alaminkarno)
+* **BASIS**: ২০১৯ সালে Certified Android App Developer।
+* **ICT Division**: ২০২১ সালে Cross Platform App Development (Flutter) কোর্স সম্পন্ন করেছেন।
 
-Github: [https://github.com/alamin-karno](https://github.com/alamin-karno)
+### 🌐 অনলাইন উপস্থিতি:
 
-LinkedIn: [https://www.linkedin.com/in/alaminkarno/](https://www.linkedin.com/in/alaminkarno/)
+* **GitHub**: [github.com/alamin-karno](https://github.com/alamin-karno)
+* **LinkedIn**: [linkedin.com/in/alaminkarno](https://www.linkedin.com/in/alaminkarno/)
+* **Twitter**: [twitter.com/alamin\_karno](https://twitter.com/alamin_karno)
+* **Facebook**: [https://www.facebook.com/alamin.karno/](https://www.facebook.com/alamin.karno/)
+* **Facebook Page**: [alamin.karnoOfficial](https://www.facebook.com/alamin.karnoOfficial/)
+* **Facebook Group**: [Alamin Karno Community](https://www.facebook.com/groups/alaminkarno)
+* **Behance**: [behance.net/alaminkarno](https://www.behance.net/alaminkarno)
+* **Dribbble**: [dribbble.com/karno786](https://dribbble.com/karno786)
+* **Fiverr**: [fiverr.com/alaminkarno](https://www.fiverr.com/alaminkarno)
+* **Instructory**: [instructory.net/users/Alamin.Karno](https://instructory.net/users/Alamin.Karno)
 
-LinkedIn Page: [https://www.linkedin.com/company/learn-with-alamin-karno/?viewAsMember=true](https://www.linkedin.com/company/learn-with-alamin-karno/?viewAsMember=true)
+### ✍️ ব্লগ ও মিডিয়া
 
-Twitter: [https://twitter.com/alamin\_karno](https://twitter.com/alamin\_karno)
+**Medium**: [Flutter ও Mobile App Development সম্পর্কিত বিভিন্ন ব্লগ পোস্ট লিখেছেন, যেমন "From Chaos to Control: The Day I Learned the Magic of Debouncing in Flutter"। ](https://alaminkarno.medium.com/from-chaos-to-control-the-day-i-learned-the-magic-of-debouncing-in-flutter-40cb7a2c1c45?utm_source=chatgpt.com)
 
-Pinterest: [https://www.pinterest.com/alaminkarno](https://www.pinterest.com/alaminkarno)
+### 🏅 অতিরিক্ত কার্যক্রম
 
-Dribble: [https://dribbble.com/karno786](https://dribbble.com/karno786)
-
-Behance: [https://www.behance.net/alaminkarno](https://www.behance.net/alaminkarno)
-
-Fiverr: [https://www.fiverr.com/alaminkarno](https://www.fiverr.com/alaminkarno)
-
-Instructory: [https://instructory.net/users/Alamin.Karno](https://instructory.net/users/Alamin.Karno)
-
-Google Site: [https://sites.google.com/diu.edu.bd/alaminkarno/home](https://sites.google.com/diu.edu.bd/alaminkarno/home)
+* **প্রথম আলো বন্ধুসভা**: Daffodil ক্যাম্পাস ইউনিটে ৩ বছর সক্রিয়ভাবে যুক্ত ছিলেন।
+* **Genex Infosys Ltd.**: ২০১৭ সালে Robi Axiata Ltd.-এর ব্র্যান্ড প্রোমোটার হিসেবে ৫ মাস কাজ করেছেন।
 
 {% hint style="info" %}
 ধন্যবাদ ।
@@ -54,4 +62,3 @@ Google Site: [https://sites.google.com/diu.edu.bd/alaminkarno/home](https://site
 
 
 
-****

@@ -9,17 +9,17 @@ description: >-
 
 ### Official Site
 
-* [Dart](https://dart.dev)
+* [Dart](https://dart.dev/)
 
 ### Example Sites
 
 * [JavaTPoint](https://www.javatpoint.com/dart-programming)
-* [Tutorialspoint](https://www.tutorialspoint.com/dart\_programming/index.htm)
+* [Tutorialspoint](https://www.tutorialspoint.com/dart_programming/index.htm)
 
 ### Online Code Editor
 
-* [DartPad](https://dartpad.dev)
-* [Tutorialspoints](https://www.tutorialspoint.com/execute\_dart\_online.php)
+* [DartPad](https://dartpad.dev/)
+* [Tutorialspoints](https://www.tutorialspoint.com/execute_dart_online.php)
 
 {% hint style="info" %}
 **Thanks for reading. Do share and subscribe to my YouTube channel.**

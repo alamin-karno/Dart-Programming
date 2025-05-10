@@ -10,7 +10,7 @@ description: >-
 
 Dartpad মূলত dart programming code করার জন্য একটি অনলাইন কোড Editor. এইখানে আপনারা চাইলেই Dart Programming এর কোড লিখতে পারবেন এবং রান করতে পারবেন । আপনারা চাইলেই এইখানে আপনাদের Dart Programming করতে পারবেন ।&#x20;
 
-**Dartpad Link: **[**https://dartpad.dev/**](https://dartpad.dev)****
+**Dartpad Link:** [**https://dartpad.dev/**](https://dartpad.dev/)
 
 উপরের লিঙ্ক এ ক্লিক করলেই আপনারা সরাসরি Dartpad এ চলে যাবেন এবং সেইখানে নিজে নিজেই কোড করতে পারবেন ।
 
@@ -18,9 +18,9 @@ Dartpad মূলত dart programming code করার জন্য একট�
 
 অনলাইনে Code Editor এর কিছু সমস্যা রয়েছে এর জন্য আপনারা চাইলে আপনাদের Computer/Laptop এর মধ্যে আপনাদের Dart / Flutter Environment Setup করে নিতে পারেন । এর জন্য আপনাকে আগে Dart SDK এবং Flutter SDK Download করে নিতে হবে । নিচে এই দুইটি SDK এর লিঙ্ক দেয়া আছে । আপনারা আপনাদের OS অনুযায়ী Download করে নিবেন ।
 
-**Dart SDK Download Link: **[**https://dart.dev/get-dart/archive**](https://dart.dev/get-dart/archive)****
+**Dart SDK Download Link:** [**https://dart.dev/get-dart/archive**](https://dart.dev/get-dart/archive)
 
-**Flutter SDK Download Link: **[**https://flutter.dev/docs/development/tools/sdk/releases**](https://flutter.dev/docs/development/tools/sdk/releases)****
+**Flutter SDK Download Link:** [**https://flutter.dev/docs/development/tools/sdk/releases**](https://flutter.dev/docs/development/tools/sdk/releases)
 
 ### **Setup Environment Path**
 
@@ -30,7 +30,7 @@ Dart এবং Flutter SDK Download করার পরে আপনাকে Co
 
 Dart এবং Flutter SDK environment path create হয়ে গেলে এর পরে আপনাকে Android Studio Download করতে এবং Install করতে হবে ।
 
-**Android Studio Download Link: **[**https://developer.android.com/studio**](https://developer.android.com/studio)****
+**Android Studio Download Link:** [**https://developer.android.com/studio**](https://developer.android.com/studio)
 
 উপরের লিঙ্ক থেকে Android Studio Download করার পরে আপনাকে .exe file এ ক্লিক করে এইটি Install করে নিতে হবে । পুরো Installation সম্পূর্ণ হলে আমাদেরকে Android Studio setup করতে হবে Dart এবং Flutter এর কোড করার জন্য ।
 
