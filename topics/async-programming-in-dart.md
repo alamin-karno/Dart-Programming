@@ -1,9 +1,3 @@
----
-description: >-
-  From Custom Streams to Optimization – Everything an Intermediate Dart
-  Developer Needs to Know
----
-
 # Async Programming in Dart
 
 Asynchronous programming is essential for building responsive applications. In Dart, the concept of asynchronous execution is closely tied with `Future` and `Stream`. While `Future` is used for single event async operations, `Stream` is used when you expect a sequence of asynchronous events. Whether you’re reading files, handling user input, or working with APIs, understanding Streams is crucial for writing efficient Dart applications.
@@ -28,11 +22,11 @@ stream.listen((value) => print('Received: \$value'));
 
 Output:
 
-{% hint style="success" %}
-Received: 1\
-Received: 2\
+```yaml
+Received: 1
+Received: 2
 Received: 3
-{% endhint %}
+```
 
 This stream emits the numbers 1, 2, and 3 in order. It supports only one listener. If you try to listen again, it will throw an error.
 
@@ -54,14 +48,62 @@ controller.sink.add(2);
 
 Output:
 
-{% hint style="success" %}
-Listener A: 1\
-Listener B: 1\
-Listener A: 2\
+```yaml
+Listener A: 1
+Listener B: 1
+Listener A: 2
 Listener B: 2
-{% endhint %}
+```
 
 Here, two listeners are added to a single stream. Both will receive the same events emitted by the controller.
+
+Broadcast streams allow multiple listeners to subscribe to the same stream. They’re useful when you want **various parts of your app to respond to the same events**, such as:
+
+* Listening to **upload/download progress**
+* **Live chat or data feed updates**
+* Tracking **sensor changes**
+* App-wide notifications (e.g., user logged out)
+
+#### Real-World Example: Upload Progress Tracker
+
+Let’s say you have a file upload feature in your app, and both the UI progress bar and the logs section need to update simultaneously.
+
+```dart
+final uploadProgressController = StreamController<double>.broadcast();
+
+// UI updates
+uploadProgressController.stream.listen((progress) {
+  print('Progress bar updated: ${progress * 100}%');
+});
+
+// Logging updates
+uploadProgressController.stream.listen((progress) {
+  print('Log: Uploaded ${(progress * 100).toStringAsFixed(0)}%');
+});
+
+// Simulate upload chunks
+void simulateUpload() async {
+  for (int i = 1; i <= 10; i++) {
+    await Future.delayed(Duration(milliseconds: 500));
+    uploadProgressController.sink.add(i / 10);
+  }
+  await uploadProgressController.close();
+}
+
+simulateUpload();
+```
+
+Output:
+
+```yaml
+Progress bar updated: 10.0%
+Log: Uploaded 10%
+...
+Progress bar updated: 100.0%
+Log: Uploaded 100%
+```
+
+Now both parts of the app receive progress updates **independently but simultaneously**. This is where `BroadcastStream` shines — **a single stream, multiple consumers.**
 
 ### Creating Streams in Dart
 
@@ -78,11 +120,11 @@ stream.listen((user) => print('Processing user: $user'));
 
 Output:
 
-{% hint style="success" %}
-Processing user: user1\
-Processing user: user2\
+```yaml
+Processing user: user1
+Processing user: user2
 Processing user: user3
-{% endhint %}
+```
 
 This creates a stream that emits elements from a list one by one.
 
@@ -99,13 +141,31 @@ stream.listen((tick) => print('Tick $tick'));
 
 Output (1 second delay between each line):
 
-{% hint style="success" %}
-Tick: 0\
-Tick: 1\
+```yaml
+Tick: 0
+Tick: 1
 Tick: 2
-{% endhint %}
+```
 
 This emits a new value (based on `count`) every second. Useful for timers or polling.
+
+Example: Polling for Server Status
+
+```dart
+final statusStream = Stream.periodic(Duration(seconds: 5), (_) => fetchServerStatus());
+
+statusStream.listen((status) {
+  print("Server status: $status");
+});
+
+Future<String> fetchServerStatus() async {
+  // Simulate fetching server status
+  await Future.delayed(Duration(milliseconds: 500));
+  return DateTime.now().second % 2 == 0 ? 'Online' : 'Offline';
+}
+```
+
+This demonstrates how to **use `Stream.periodic` for polling server health**, something common in dashboards or admin panels.
 
 #### 3. Async Generator Function with `async*`
 
@@ -115,22 +175,21 @@ This emits a new value (based on `count`) every second. Useful for timers or pol
 ```dart
 Stream<String> fetchPages(int totalPages) async* {
   for (int i = 1; i <= totalPages; i++) {
-    final pageData = await fetchPageFromApi(i);  // hypothetical network call
-    yield pageData;
+    await Future.delayed(Duration(seconds: 1)); // simulate delay
+    yield 'Fetched page $i';
   }
 }
 
-// In your code:
-fetchPages(3).listen((page) => print('Received page: $page'));
+fetchPages(3).listen((page) => print('Received: $page'));
 ```
 
 Hypothetical Output (if `fetchPageFromApi` returns "Page $i" after delay):
 
-{% hint style="success" %}
-Received page: Page 1\
-Received page: Page 2\
+```yaml
+Received page: Page 1
+Received page: Page 2
 Received page: Page 3
-{% endhint %}
+```
 
 This is an asynchronous generator. It yields a value after each delay. Ideal for step-by-step processing with delays or awaiting async tasks.
 
@@ -152,10 +211,10 @@ await controller.close();
 
 Expected Output:
 
-{% hint style="success" %}
-Received: Hello\
+```yaml
+Received: Hello
 Received: World
-{% endhint %}
+```
 
 This approach is helpful when you're manually handling events—such as user inputs or system data.
 
@@ -298,8 +357,4 @@ In this example, we debounce the user input in a `TextField`. If the user types 
 
 ### Conclusion
 
-Streams are a powerful part of Dart’s asynchronous capabilities. Understanding how to create, consume, transform, and optimize them will make your apps faster and more maintainable. This post focused strictly on concepts useful for intermediate developers—those who’ve moved beyond basics but are not yet diving into Dart isolates or advanced custom stream transformers.
-
-Whether you're building reactive UIs or processing continuous data, mastering Streams is essential.
-
-Stay tuned for the next post in our Dart Bootcamp, where we’ll integrate Streams with Flutter widgets using `StreamBuilder` and build a fully reactive UI.
+Streams are a powerful part of Dart’s asynchronous capabilities. Understanding how to create, consume, transform, and optimize them will make your apps faster and more maintainable. Whether you're tracking live uploads, syncing real-time data, or reacting to user events, mastering Streams can dramatically elevate your Dart and Flutter development.
