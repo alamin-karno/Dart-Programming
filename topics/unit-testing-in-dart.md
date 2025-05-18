@@ -29,6 +29,8 @@ The **AAA (Arrange, Act, Assert)** pattern is a widely adopted structure for wri
 
 This pattern promotes readability and maintainability in your test code.
 
+***
+
 ### Writing a Basic Unit Test
 
 Let's start with a simple example of testing a function that adds two numbers:
@@ -72,6 +74,8 @@ Output:
 
 This test passes because `add(2, 3)` correctly returns `5`.
 
+***
+
 ### Testing Asynchronous Code
 
 Dart's `Future` and `Stream` classes are commonly used for asynchronous operations. Testing such code requires the use of `async` and `await` in your test functions.
@@ -114,6 +118,8 @@ Output (after \~1 second delay):
 
 This test passes after the `Future.delayed` completes and returns `'Data loaded'`.
 
+***
+
 ### Using Matchers for More Expressive Tests
 
 Dart's `test` package provides a rich set of matchers to write expressive and readable assertions.
@@ -139,11 +145,13 @@ Output:
 
 This test also passes because `value` is both not null and greater than 0.
 
+***
+
 ### Real-World Example: Testing a User Authentication Service
 
-Consider a `UserService` class responsible for authenticating users. To test this class in isolation, we can use mocking to simulate its dependencies.
+Let's explore a more realistic use case involving user authentication. In this example, we simulate an external authentication service using a class called `AuthService`, and test another class, `UserService`, that depends on it.
 
-**`lib/user_service.dart`**
+#### `AuthService` – Simulating External Logic
 
 ```dart
 class AuthService {
@@ -152,7 +160,13 @@ class AuthService {
     return username == 'admin' && password == 'password';
   }
 }
+```
 
+The `AuthService` class mimics a backend API call. It contains a method `authenticate` which checks if the username and password match hardcoded values. In a real-world scenario, this method would send HTTP requests to a server.
+
+#### `UserService` – Business Logic Layer
+
+```dart
 class UserService {
   final AuthService authService;
 
@@ -165,60 +179,90 @@ class UserService {
 }
 ```
 
-**`test/user_service_test.dart`**
+The `UserService` class represents your app’s internal logic. It depends on `AuthService` to handle authentication but transforms the result into user-friendly messages. We pass `AuthService` into the constructor to make it easily replaceable with a mock during testing (a technique called _dependency injection_).
+
+***
+
+#### Testing `UserService` with `mockito`
+
+To test `UserService` without hitting a real API, we use the `mockito` package to simulate (`mock`) the behavior of `AuthService`.
+
+First, create a mock class:
 
 ```dart
-import 'package:test/test.dart';
-import 'package:mockito/mockito.dart';
-import '../lib/user_service.dart';
-
-// Create a MockAuthService by extending Mock and implementing AuthService
 class MockAuthService extends Mock implements AuthService {}
-
-void main() {
-  group('UserService', () {
-    test('returns success message when authentication is successful', () async {
-      // Arrange
-      final mockAuthService = MockAuthService();
-      when(mockAuthService.authenticate('admin', 'password'))
-          .thenAnswer((_) async => true);
-
-      final userService = UserService(mockAuthService);
-
-      // Act
-      final result = await userService.login('admin', 'password');
-
-      // Assert
-      expect(result, equals('Login successful'));
-    });
-
-    test('returns failure message when authentication fails', () async {
-      // Arrange
-      final mockAuthService = MockAuthService();
-      when(mockAuthService.authenticate('user', 'wrongpassword'))
-          .thenAnswer((_) async => false);
-
-      final userService = UserService(mockAuthService);
-
-      // Act
-      final result = await userService.login('user', 'wrongpassword');
-
-      // Assert
-      expect(result, equals('Login failed'));
-    });
-  });
-}
 ```
 
-In this example, we use the `mockito` package to create a mock `AuthService`. This allows us to test the `UserService` class without relying on the actual implementation of `AuthService`.
+This tells `mockito` to use `MockAuthService` as a stand-in for `AuthService` in your tests.
 
-Combined Output:
+***
+
+Test 1: Successful Login
+
+```dart
+test('returns success message when authentication is successful', () async {
+  // Arrange: Set up a mock AuthService
+  final mockAuthService = MockAuthService();
+  when(mockAuthService.authenticate('admin', 'password'))
+      .thenAnswer((_) async => true);
+
+  final userService = UserService(mockAuthService);
+
+  // Act: Call the login method
+  final result = await userService.login('admin', 'password');
+
+  // Assert: Expect a success message
+  expect(result, equals('Login successful'));
+});
+```
+
+* `when(...).thenAnswer(...)` sets up the mock to return `true` when given specific input.
+* The `login` method is then tested to ensure it returns `'Login successful'`.
+
+***
+
+Test 2: Failed Login
+
+```dart
+test('returns failure message when authentication fails', () async {
+  // Arrange
+  final mockAuthService = MockAuthService();
+  when(mockAuthService.authenticate('user', 'wrongpassword'))
+      .thenAnswer((_) async => false);
+
+  final userService = UserService(mockAuthService);
+
+  // Act
+  final result = await userService.login('user', 'wrongpassword');
+
+  // Assert
+  expect(result, equals('Login failed'));
+});
+```
+
+This test ensures that when incorrect credentials are provided, the mocked authentication call returns `false`, and `UserService.login` returns the appropriate failure message.
+
+***
+
+Output:
 
 {% hint style="success" %}
 00:00 +2: All tests passed!
 {% endhint %}
 
-Both tests pass because the mock `AuthService` was configured properly with `when(...).thenAnswer(...)`.
+Both tests pass because `MockAuthService` behaves exactly as configured.
+
+***
+
+### Why Mocking Is Important
+
+Using mocks allows you to:
+
+* Test code in isolation without relying on network calls.
+* Simulate various scenarios (success, failure, exceptions) with minimal setup.
+* Run tests quickly and reliably.
+
+***
 
 ### Best Practices for Writing Unit Tests
 
