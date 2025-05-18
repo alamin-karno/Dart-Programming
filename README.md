@@ -25,6 +25,7 @@ coverY: 184.19970631424377
 * [**Unit Testing in Dart**](topics/unit-testing-in-dart.md)
 * [**ডার্টে ইউনিট টেস্টিং**](topics/unit-testing-in-dart-bangla.md)
 * [**Dart’s Type System**](topics/darts-type-system.md)
+* [**ডার্টে টাইপ সিস্টেম**](topics/darts-type-system-bangla.md)
 * **Input**
 * **If / else**
 * **Switch**
