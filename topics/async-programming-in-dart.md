@@ -64,43 +64,82 @@ Broadcast streams allow multiple listeners to subscribe to the same stream. They
 * Tracking **sensor changes**
 * App-wide notifications (e.g., user logged out)
 
-#### Real-World Example: Upload Progress Tracker
+#### Real-World Example: Upload Progress Using Broadcast Stream
 
 Let’s say you have a file upload feature in your app, and both the UI progress bar and the logs section need to update simultaneously.
 
+We’ll use a `StreamController<double>.broadcast()` so multiple listeners can listen to the same stream.
+
+**Step 1: Create the controller (shared source of updates)**
+
 ```dart
 final uploadProgressController = StreamController<double>.broadcast();
+```
 
-// UI updates
-uploadProgressController.stream.listen((progress) {
-  print('Progress bar updated: ${progress * 100}%');
-});
+***
 
-// Logging updates
+Step 2: Log progress (e.g., in a service or background part)
+
+```dart
 uploadProgressController.stream.listen((progress) {
   print('Log: Uploaded ${(progress * 100).toStringAsFixed(0)}%');
 });
+```
 
-// Simulate upload chunks
+This runs separately from UI. It prints progress like:\
+`Log: Uploaded 10%`, `Log: Uploaded 20%`, ...
+
+***
+
+Step 3: Update UI (inside a StatefulWidget)
+
+```dart
+class UploadWidget extends StatefulWidget {
+  @override
+  _UploadWidgetState createState() => _UploadWidgetState();
+}
+
+class _UploadWidgetState extends State<UploadWidget> {
+  double _progress = 0.0;
+  StreamSubscription<double>? _subscription;
+
+  @override
+  void initState() {
+    super.initState();
+    _subscription = uploadProgressController.stream.listen((progress) {
+      setState(() {
+        _progress = progress;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _subscription?.cancel(); // Always cancel to avoid memory leaks
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return LinearProgressIndicator(value: _progress);
+  }
+}
+```
+
+The UI listens separately to the same stream, but manages state using `setState`.
+
+***
+
+Step 4: Simulate file upload
+
+```dart
 void simulateUpload() async {
   for (int i = 1; i <= 10; i++) {
     await Future.delayed(Duration(milliseconds: 500));
-    uploadProgressController.sink.add(i / 10);
+    uploadProgressController.sink.add(i / 10); // Emits 0.1, 0.2 ... 1.0
   }
-  await uploadProgressController.close();
+  await uploadProgressController.close(); // Close when done
 }
-
-simulateUpload();
-```
-
-Output:
-
-```yaml
-Progress bar updated: 10.0%
-Log: Uploaded 10%
-...
-Progress bar updated: 100.0%
-Log: Uploaded 100%
 ```
 
 Now both parts of the app receive progress updates **independently but simultaneously**. This is where `BroadcastStream` shines — **a single stream, multiple consumers.**
