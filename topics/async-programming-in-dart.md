@@ -276,35 +276,75 @@ subscription.cancel();
 
 Use this to manage the lifecycle of your listeners, especially in Flutter where you might need to stop listening on widget disposal.
 
+**Why is canceling subscriptions important?**
+
+If you don’t cancel a subscription (especially in widgets), it can continue running even after the widget is disposed. This may cause memory leaks, unexpected UI behavior, or performance issues. Always cancel in `dispose()` to clean up properly.
+
+***
+
 ### Stream Transformations
 
-#### `map`, `where`, `take`, `skip`
+Transforming a stream means changing or filtering data before it reaches listeners. This helps you write cleaner, modular, and more efficient reactive code.
+
+Common Methods:
+
+**`map()`** – Transforms each element.
 
 ```dart
-stream.map((e) => e * 2).where((e) => e > 5);
+stream.map((e) => e * 2);
 ```
 
-Transforms values by doubling them and filters those greater than 5.
-
-#### `asyncMap`
+**`where()`** – Filters based on a condition.
 
 ```dart
-stream.asyncMap((e) async => await fetchData(e));
+stream.where((e) => e > 5);
+```
+
+**`take(n)`** – Takes only the first `n` items.
+
+```dart
+stream.take(3);
+```
+
+**`skip(n)`** – Skips the first `n` items.
+
+```
+stream.skip(1);
+```
+
+**When to use these:**
+
+* Use `map()` to convert raw values (like API responses) into UI models.
+* Use `where()` to filter results (e.g., only active users).
+* Use `take()` to limit load (like top 3 items).
+* Use `skip()` to remove headers or unwanted initial data.
+
+Asynchronous Variants:
+
+**`asyncMap()`** – Useful for calling APIs or async processing.
+
+```dart
+stream.asyncMap((id) async => await fetchData(id));
 ```
 
 Used when transforming stream data into another async value. Useful for network calls or async parsing.
 
-#### `expand` and `asyncExpand`
+**`expand()` / `asyncExpand()`** – Emits multiple values per input.
 
 ```dart
-stream.expand((e) => [e, e * 10]);
-stream.asyncExpand((e) async* {
-  yield e;
-  yield await computeSomethingElse(e);
+stream.expand((item) => [item, item * 2]);
+
+stream.asyncExpand((item) async* {
+  yield item;
+  yield await getNext(item);
 });
 ```
 
 `expand` flattens items into multiple values; `asyncExpand` does this with async logic. Useful when each item needs to result in multiple outputs.
+
+**Best Practice:** Use these to avoid deeply nested callbacks and isolate transformation logic from business logic.
+
+***
 
 ### Error Handling in Streams
 
@@ -322,7 +362,7 @@ Always handle errors to prevent unhandled exceptions, especially in production. 
 
 #### 1. Debounce Rapid Inputs
 
-Use `debounceTime` to prevent handling every keystroke (useful for search input).
+Use `debounceTime` to prevent handling every keystroke (useful for search input). When handling high-frequency input (e.g., typing), reacting to every keystroke can overload your system or make unnecessary API calls.
 
 **Before:**
 
@@ -332,7 +372,7 @@ searchController.stream.listen((query) {
 });
 ```
 
-**After:**
+**After (**&#x55;se `debounceTime()` (e.g., via `rxdart`) to delay reaction until the user pauses typing:**):**
 
 ```dart
 searchController.stream
@@ -343,6 +383,14 @@ searchController.stream
 ```
 
 This waits 300ms after the last input before emitting, reducing API calls.
+
+**Why debounce?**
+
+Without it, you might trigger 20+ API calls in a few seconds. Debouncing reduces noise, saves bandwidth, and improves responsiveness.
+
+**When is it not useful?**
+
+If the user stops typing entirely (i.e., becomes inactive), the stream will emit the last value after the debounce duration. Inactivity alone won’t "cancel" the event—but debounce ensures that only the most recent action triggers a response after a delay.
 
 #### 2. Eliminate Redundant Events
 
