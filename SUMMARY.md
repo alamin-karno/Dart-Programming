@@ -14,7 +14,7 @@
 * [String Interpolation](topics/string-interpolation.md)
 * [Constant Keywords](topics/constant-keywords.md)
 * [Async Programming in Dart](topics/async-programming-in-dart.md)
-* [ডার্টে অ্যাসিনক্রোনাস প্রোগ্রামিং](topics/sync-programming-in-dart-bangla.md)
+* [ডার্টে অ্যাসিনক্রোনাস প্রোগ্রামিং](topics/async-programming-in-dart-bangla.md)
 * [Unit Testing in Dart](topics/unit-testing-in-dart.md)
 * [ডার্টে ইউনিট টেস্টিং](topics/unit-testing-in-dart-bangla.md)
 * [Dart’s Type System](topics/darts-type-system.md)
